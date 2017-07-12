@@ -56,15 +56,15 @@
 									#if( $galleryItem.showLastAvailable )
 										<span class="lastProd last-AR">Últimos Disponibles</span>
 									#end
-								</a>
-								#if($galleryItem.hasPromotion)
-									#if($galleryItem.promotion.isDiscountTypePrice)
-										<p class="promoRibbonHome"><span>$galleryItem.promotion.discountPercent</span>&#37; <strong>OFF</strong></p>
-									#elseif ($galleryItem.promotion.isDiscountTypeQuantity && "AR" != "BR")
-										<p class="promoRibbonHome"><strong class="promoQtyBuy">$galleryItem.promotion.quantityTake<span class="promoQtyBuyX">x</span>$galleryItem.promotion.quantityBuy</strong></p>
+									
+									#if($galleryItem.hasPromotion)
+										#if($galleryItem.promotion.isDiscountTypePrice)
+											<p class="promoRibbonHome"><span>$galleryItem.promotion.discountPercent</span>&#37; <strong>OFF</strong></p>
+										#elseif ($galleryItem.promotion.isDiscountTypeQuantity && "AR" != "BR")
+											<p class="promoRibbonHome"><strong class="promoQtyBuy">$galleryItem.promotion.quantityTake<span class="promoQtyBuyX">x</span>$galleryItem.promotion.quantityBuy</strong></p>
+										#end
 									#end
-								#end
-
+								</a>
 							</figure>
 						</li>
 
@@ -163,7 +163,7 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-4">
-				<div class="ogus-linea-home-box pull-left">
+				<div class="ogus-linea-home-box ogus-linea-home-box--left">
 					<a href="javascript:void(0)">
 					<img src="https://centrodph.github.io/ogus/Minimalista/CSS/images/icon-linea-1.png"
 					class="img-responsive" />
@@ -181,7 +181,7 @@
 				</div>
 			</div>
 			<div class="col-sm-4">
-				<div class="ogus-linea-home-box pull-right">
+				<div class="ogus-linea-home-box ogus-linea-home-box--right">
 					<a href="javascript:void(0)">
 					<img src="https://centrodph.github.io/ogus/Minimalista/CSS/images/icon-linea-3.png"
 					class="img-responsive" />
