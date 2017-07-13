@@ -55,6 +55,10 @@ var productopage={
     exist: function(){
         return ( this.page.length > 0 ) ? true : false ;
     },
+    moveTitle: function() {
+      this.resize();
+      $(window).resize(productopage.resize);
+    },
     moveDesc: function(){
         //$('.component.vip .contentBtnBuy').after($(".component.prodDescription.ch-tabNavigator"));
     },
@@ -66,9 +70,16 @@ var productopage={
         //$(t).insertBefore(".component.prodDescription");
         $(t).insertAfter(".contentBtnBuy");
     },
+    resize: function() {
+      var _window = $(window).width();
+      if (_window < 768) {
+        $('.vipWrapper .title');
+      }
+    },
     init: function(){
         this.moveDesc();
         this.addProtegido();
+        this.resize();
         console.log(" producto page ");
     }
 
